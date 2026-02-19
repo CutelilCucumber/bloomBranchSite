@@ -35,6 +35,7 @@ nav {
   font-size: 0.9rem;
   color: #555;
   position: sticky;
+  z-index: 1;
   top: 0;
   left: 0;
   width: 100%;
@@ -150,13 +151,11 @@ h2 {
   color: #333;
 }
 
-/* Hover grow effect */
 .photoCard:hover {
   transform: scale(1.04);
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
 }
 
-/* Tablet and up */
 @media (min-width: 700px) {
   .photo-card {
     max-width: calc(33.333% - 0.67rem);
@@ -167,7 +166,6 @@ h2 {
   }
 }
 
-/* Desktop */
 @media (min-width: 1000px) {
   .photo-card {
     max-width: calc(25% - 0.75rem);
@@ -239,6 +237,7 @@ button:hover {
   font-size: 0.9rem;
   color: #555;
   position: sticky;
+  z-index: 1;
   bottom: 0;
   left: 0;
   width: 100%;
