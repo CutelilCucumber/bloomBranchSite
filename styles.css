@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+  --green: #2f7a4f;
+  --dark: #1f2933;
+  --light: #f5f7fa;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+body {
+  line-height: 1.6;
+  color: var(--dark);
+  background: #f7f5f5;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1.25rem;
+}
+
+nav {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  background: #f0f2f5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
+  color: #555;
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.navBar {
+    flex-shrink: 1;
+    display: flex;
+    align-items: center;
+    gap: .8rem;
+}
+.navBtn {
+  font-family: "Amatic SC", sans-serif;
+  font-weight: 400;
+  font-size: 30px;
+}
+.title, .title > a {
+  width: max-content;
+  flex-shrink: 0;
+  font-family: "Amatic SC", sans-serif;
+  font-weight: 800;
+  font-size: 42px;
+  padding-bottom: -.5rem;
+  padding-top: -.5rem;
+}
+
+a {
+  text-decoration: none;
+  color: var(--dark);
+  transition: filter .2s ease-in-out, text-shadow .2s ease-in-out;
+}
+
+a:hover {
+    filter: brightness(.8);
+    text-shadow: 1px 1px #00000059;
+}
+
+.hero {
+  background-image: url("assets/succulentHero.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: white;
+  text-align: center;
+  padding: 4rem 1.5rem;
+}
+
+.hero h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: #f0f2f5;
+  font-family: "Amatic SC", sans-serif;
+  font-weight: 800;
+  letter-spacing: .5rem;
+}
+
+.hero p {
+  opacity: 1;
+  margin-bottom: 1.5rem;
+}
+
+.cta {
+  display: inline-block;
+  background: var(--green);
+  color: white;
+  padding: 0.75rem 1.25rem;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+.about, .services, .contact {
+  margin: 3rem 0;
+}
+
+.info > p{
+    margin-bottom: .5rem;
+}
+
+h2 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.photoGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.photoCard {
+  flex: 1 1 160px; /* grows, shrinks, minimum width */
+  max-width: calc(50% - 0.5rem);
+  background: #f5f7fa;
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.photoCard img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  display: block;
+}
+
+.photoCard p {
+  padding: 0.5rem 0.75rem;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+/* Hover grow effect */
+.photoCard:hover {
+  transform: scale(1.04);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Tablet and up */
+@media (min-width: 700px) {
+  .photo-card {
+    max-width: calc(33.333% - 0.67rem);
+  }
+
+  .photo-card img {
+    height: 180px;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1000px) {
+  .photo-card {
+    max-width: calc(25% - 0.75rem);
+  }
+
+  .photo-card img {
+    height: 200px;
+  }
+}
+
+form {
+  display: grid;
+  gap: 0.75rem;
+  max-width: 480px;
+}
+
+label {
+  display: grid;
+  gap: 0.25rem;
+  font-weight: 500;
+}
+
+input, textarea {
+  padding: 0.6rem 0.7rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+button {
+  margin-top: 0.5rem;
+  background: var(--green);
+  color: white;
+  border: none;
+  padding: 0.7rem 1rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: filter .5s ease-in-out;
+}
+
+button:hover {
+  filter: brightness(0.80);
+}
+
+.btnContainer {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  gap: 5%;
+  height: min-content;
+}
+.btn {
+    transition: filter .5s ease-in-out;
+}
+
+.btn:hover {
+  filter: invert(31%) sepia(12%) saturate(22%) hue-rotate(320deg) brightness(98%) contrast(86%);
+  cursor: pointer;
+}
+
+.footer {
+  background: #f0f2f5;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 0.9rem;
+  color: #555;
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 5rem;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Tablet & up */
+@media (min-width: 700px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .service-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
