@@ -171,6 +171,11 @@
 
       <form name="contact" method="POST" netlify netlify-honeypot="bot-field">
 
+        <input class="honey" type="honey" name="form-name" value="do not fill" />
+        <p class="honey">
+          <label>username: <input name="bot-field" /></label>
+        </p>
+
         <label>
           Name
           <input type="text" name="name" required />
@@ -200,11 +205,6 @@
           Referred by
           <input type="text" name="referral"/>
         </label>
-
-        <input class="honey" type="honey" name="form-name" value="do not fill" />
-        <p class="honey">
-          <label>username: <input name="bot-field" /></label>
-        </p>
 
         <button class="submit" type="submit">Send Message</button>
       </form>
