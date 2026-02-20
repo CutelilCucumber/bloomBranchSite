@@ -170,7 +170,6 @@
       <h2>Contact</h2>
 
       <form name="contact" method="POST" netlify netlify-honeypot="bot-field">
-        <input type="honey" name="form-name" value="contact" />
 
         <label>
           Name
@@ -194,7 +193,7 @@
 
         <label>
           Tell me more about your project!
-          <textarea name="project details" rows="4" required></textarea>
+          <textarea name="message" rows="4" required></textarea>
         </label>
 
         <label>
@@ -202,6 +201,7 @@
           <input type="text" name="referral" required />
         </label>
 
+        <input class="honey" type="honey" name="form-name" value="do not fill" />
         <p class="honey">
           <label>username: <input name="bot-field" /></label>
         </p>
