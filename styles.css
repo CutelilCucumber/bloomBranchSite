@@ -35,7 +35,7 @@ nav {
   font-size: 0.9rem;
   color: #555;
   position: sticky;
-  z-index: 1;
+  z-index: 6;
   top: 0;
   left: 0;
   width: 100%;
@@ -123,104 +123,70 @@ h2 {
 }
 
 .carousel {
-  max-width: 900px;
-  margin: 3rem auto;
-  text-align: center;
-}
-
-.carousel-inner {
   position: relative;
-}
-
-.carousel input[type="radio"] {
-  display: none;
+  max-width: 100%;
 }
 
 .carousel-viewport {
   overflow: hidden;
-  border-radius: 12px;
-  background: #111;
-  min-height: 220px;
+  width: 100%;
+  height: 250px;
 }
 
 .carousel-track {
   display: flex;
-  width: 1200%; /* 12 slides */
-  transition: transform .2s ease-in-out;
+  height: 100%;
+  transition: transform 0.5s ease;
+  will-change: transform;
 }
 
-.radio {
-    display: none;
-}
-
-.slide {
+.carousel-track img {
   width: 100%;
+  height: 100%;
   flex-shrink: 0;
-}
-
-.slide img {
-  width: 100vw;
-  height: 320px;
   object-fit: cover;
-  display: block;
 }
 
-/* Positioning based on checked radio */
-#slide-1:checked ~ .carousel-viewport .carousel-track { transform: translateX(0%); }
-#slide-2:checked ~ .carousel-viewport .carousel-track { transform: translateX(-100%); }
-#slide-3:checked ~ .carousel-viewport .carousel-track { transform: translateX(-200%); }
-#slide-4:checked ~ .carousel-viewport .carousel-track { transform: translateX(-300%); }
-#slide-5:checked ~ .carousel-viewport .carousel-track { transform: translateX(-400%); }
-#slide-6:checked ~ .carousel-viewport .carousel-track { transform: translateX(-500%); }
-#slide-7:checked ~ .carousel-viewport .carousel-track { transform: translateX(-600%); }
-#slide-8:checked ~ .carousel-viewport .carousel-track { transform: translateX(-700%); }
-#slide-9:checked ~ .carousel-viewport .carousel-track { transform: translateX(-800%); }
-#slide-10:checked ~ .carousel-viewport .carousel-track { transform: translateX(-900%); }
-#slide-11:checked ~ .carousel-viewport .carousel-track { transform: translateX(-1000%); }
-#slide-12:checked ~ .carousel-viewport .carousel-track { transform: translateX(-1100%); }
-
-/* Navigation dots */
-.carousel-nav {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 0.4rem;
-  margin-top: 0.75rem;
-}
-
-.carousel-nav label {
-  width: 10px;
-  height: 10px;
-  background: #ccc;
-  border-radius: 50%;
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.6);
+  color: white;
+  border: none;
+  padding: 0.5rem 0.75rem;
   cursor: pointer;
-  transition: transform 0.2s ease, background 0.2s ease;
+  z-index: 5;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
 }
 
-.carousel-nav label:hover {
-  transform: scale(1.2);
+.arrow.left { left: 10px; }
+.arrow.right { right: 10px; }
+
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 8px;
+  align-items: center;
 }
 
-#slide-1:checked ~ .carousel-nav label[for="slide-1"],
-#slide-2:checked ~ .carousel-nav label[for="slide-2"],
-#slide-3:checked ~ .carousel-nav label[for="slide-3"],
-#slide-4:checked ~ .carousel-nav label[for="slide-4"],
-#slide-5:checked ~ .carousel-nav label[for="slide-5"],
-#slide-6:checked ~ .carousel-nav label[for="slide-6"],
-#slide-7:checked ~ .carousel-nav label[for="slide-7"],
-#slide-8:checked ~ .carousel-nav label[for="slide-8"],
-#slide-9:checked ~ .carousel-nav label[for="slide-9"],
-#slide-10:checked ~ .carousel-nav label[for="slide-10"],
-#slide-11:checked ~ .carousel-nav label[for="slide-11"],
-#slide-12:checked ~ .carousel-nav label[for="slide-12"] {
-  background: #2f7a4f;
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #aaa;
+  border: none;
 }
 
-/* Responsive height */
-@media (min-width: 700px) {
-    .carousel-viewport {
-    min-height: 320px;
-  }
+.dot.active {
+  background: var(--green);
+}
+
+.dot:hover {
+    transform: scale(1.05);
 }
 
 .photoGrid {
@@ -230,7 +196,7 @@ h2 {
 }
 
 .photoCard {
-  flex: 1 1 160px; /* grows, shrinks, minimum width */
+  flex: 1 1 160px;
   max-width: calc(50% - 0.5rem);
   background: #f5f7fa;
   border-radius: 10px;
@@ -289,7 +255,7 @@ input, textarea {
   font-size: 1rem;
 }
 
-button {
+.submit {
   margin-top: 0.5rem;
   background: var(--green);
   color: white;
@@ -331,7 +297,7 @@ button:hover {
   font-size: 0.9rem;
   color: #555;
   position: sticky;
-  z-index: 1;
+  z-index: 6;
   bottom: 0;
   left: 0;
   width: 100%;
@@ -354,5 +320,23 @@ button:hover {
 
   .service-list {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .tel {
+    display: none;
+  }
+
+  .slide img {
+    max-height: 70vh;
+  }
+
+  .arrow {
+    width: 44px;
+    height: 44px;
+    font-size: 1.5rem;
+  }
+
+  .carousel-viewport {
+    height: 60vh;
   }
 }
