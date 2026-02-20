@@ -6,6 +6,10 @@
   <title>Bloom & Branch</title>
   <meta name="description" content="Professional landscaping services. Lawns, cleanup, maintenance." />
   <link rel="stylesheet" href="styles.css" />
+
+  <link rel="preload" as="image" href="assets/photos/photo1.webp">
+  <link rel="preload" as="image" href="assets/photos/photo2.webp">
+  <link rel="preload" as="image" href="assets/photos/photo3.webp">
 </head>
 <body id="main">
     <nav>
@@ -57,74 +61,115 @@
     </section>
 
     <section id="photos" class="photos">
-      <h2>Photos</h2>
+      <h2>Photos of My Work</h2>
 
-      <div class="photoGrid">
+      <div class="carousel-inner">
+    <input class="radio" type="radio" name="slides" id="slide-1" checked />
+    <input class="radio" type="radio" name="slides" id="slide-2" />
+    <input class="radio" type="radio" name="slides" id="slide-3" />
+    <input class="radio" type="radio" name="slides" id="slide-4" />
+    <input class="radio" type="radio" name="slides" id="slide-5" />
+    <input class="radio" type="radio" name="slides" id="slide-6" />
+    <input class="radio" type="radio" name="slides" id="slide-7" />
+    <input class="radio" type="radio" name="slides" id="slide-8" />
+    <input class="radio" type="radio" name="slides" id="slide-9" />
+    <input class="radio" type="radio" name="slides" id="slide-10" />
+    <input class="radio" type="radio" name="slides" id="slide-11" />
+    <input class="radio" type="radio" name="slides" id="slide-12" />
 
-        <div class="photoCard">
-          <img src="assets/photos/photo1.webp" alt="Freshly cut lawn with edging" />
-          <p>Weekly Lawn Maintenance</p>
-        </div>
+    <div class="carousel-viewport">
+      <div class="carousel-track">
+        <div class="slide"><img src="assets/photos/photo1.webp" loading="lazy" alt="Landscaping work 1" /></div>
+        <div class="slide"><img src="assets/photos/photo2.webp" loading="lazy" alt="Landscaping work 2" /></div>
+        <div class="slide"><img src="assets/photos/photo3.webp" loading="lazy" alt="Landscaping work 3" /></div>
+        <div class="slide"><img src="assets/photos/photo4.webp" loading="lazy" alt="Landscaping work 4" /></div>
+        <div class="slide"><img src="assets/photos/photo5.webp" loading="lazy" alt="Landscaping work 5" /></div>
+        <div class="slide"><img src="assets/photos/photo6.webp" loading="lazy" alt="Landscaping work 6" /></div>
+        <div class="slide"><img src="assets/photos/photo7.webp" loading="lazy" alt="Landscaping work 7" /></div>
+        <div class="slide"><img src="assets/photos/photo8.webp" loading="lazy" alt="Landscaping work 8" /></div>
+        <div class="slide"><img src="assets/photos/photo9.webp" loading="lazy" alt="Landscaping work 9" /></div>
+        <div class="slide"><img src="assets/photos/photo10.webp" loading="lazy" alt="Landscaping work 10" /></div>
+        <div class="slide"><img src="assets/photos/photo11.webp" loading="lazy" alt="Landscaping work 11" /></div>
+        <div class="slide"><img src="assets/photos/photo12.webp" loading="lazy" alt="Landscaping work 12" /></div>
+      </div>
+    </div>
 
-        <div class="photoCard">
-          <img src="assets/photos/photo2.webp" alt="Mulched garden bed" />
-          <p>Garden Bed Refresh</p>
-        </div>
-
-        <div class="photoCard">
-          <img src="assets/photos/photo3.webp" alt="Seasonal yard cleanup" />
-          <p>Seasonal Cleanup</p>
-        </div>
-
-        <div class="photoCard">
-          <img src="assets/photos/photo4.webp" alt="Trimmed hedges and shrubs" />
-          <p>Hedge Trimming</p>
-        </div>
-
-        <div class="photoCard">
-          <img src="assets/photos/photo5.webp" alt="Freshly cut lawn with edging" />
-          <p>Weekly Lawn Maintenance</p>
-        </div>
-    
-        <div class="photoCard">
-          <img src="assets/photos/photo6.webp" alt="Mulched garden bed" />
-          <p>Garden Bed Refresh</p>
-        </div>
-    
-        <div class="photoCard">
-          <img src="assets/photos/photo7.webp" alt="Seasonal yard cleanup" />
-          <p>Seasonal Cleanup</p>
-        </div>
-    
-        <div class="photoCard">
-          <img src="assets/photos/photo8.webp" alt="Trimmed hedges and shrubs" />
-          <p>Hedge Trimming</p>
-        </div>
-
-        <div class="photoCard">
-          <img src="assets/photos/photo9.webp" alt="Freshly cut lawn with edging" />
-          <p>Weekly Lawn Maintenance</p>
-        </div>
-    
-        <div class="photoCard">
-          <img src="assets/photos/photo10.webp" alt="Mulched garden bed" />
-          <p>Garden Bed Refresh</p>
-        </div>
-    
-        <div class="photoCard">
-          <img src="assets/photos/photo11.webp" alt="Seasonal yard cleanup" />
-          <p>Seasonal Cleanup</p>
-        </div>
-    
-        <div class="photoCard">
-          <img src="assets/photos/photo12.webp" alt="Trimmed hedges and shrubs" />
-          <p>Hedge Trimming</p>
-        </div>
+    <div class="carousel-nav">
+      <label for="slide-1"></label>
+      <label for="slide-2"></label>
+      <label for="slide-3"></label>
+      <label for="slide-4"></label>
+      <label for="slide-5"></label>
+      <label for="slide-6"></label>
+      <label for="slide-7"></label>
+      <label for="slide-8"></label>
+      <label for="slide-9"></label>
+      <label for="slide-10"></label>
+      <label for="slide-11"></label>
+      <label for="slide-12"></label>
+    </div>
   </div>
     </section>
 
     <section id="designs" class="designs">
-      <h2>Designs</h2>
+      <h2>My Designs</h2>
+
+
+
+      <div class="photoGrid">
+
+        <div class="photoCard">
+          <img src="assets/mockups/mockup1.webp" alt="Freshly cut lawn with edging" />
+          </div>
+
+        <div class="photoCard">
+          <img src="assets/mockups/mockup2.webp" alt="Mulched garden bed" />
+          </div>
+
+        <div class="photoCard">
+          <img src="assets/mockups/mockup3.webp" alt="Seasonal yard cleanup" />
+          </div>
+
+        <div class="photoCard">
+          <img src="assets/mockups/mockup4.webp" alt="Trimmed hedges and shrubs" />
+          </div>
+
+        <div class="photoCard">
+          <img src="assets/mockups/mockup5.webp" alt="Freshly cut lawn with edging" />
+          </div>
+    
+        <div class="photoCard">
+          <img src="assets/mockups/mockup6.webp" alt="Mulched garden bed" />
+          </div>
+    
+        <div class="photoCard">
+          <img src="assets/mockups/mockup7.webp" alt="Seasonal yard cleanup" />
+          </div>
+    
+        <div class="photoCard">
+          <img src="assets/mockups/mockup8.webp" alt="Trimmed hedges and shrubs" />
+          </div>
+
+        <div class="photoCard">
+          <img src="assets/mockups/mockup9.webp" alt="Freshly cut lawn with edging" />
+          </div>
+    
+        <div class="photoCard">
+          <img src="assets/mockups/mockup10.webp" alt="Mulched garden bed" />
+          </div>
+
+        <div class="photoCard">
+          <img src="assets/mockups/mockup11.webp" alt="Seasonal yard cleanup" />
+          </div>
+    
+        <div class="photoCard">
+          <img src="assets/mockups/mockup12.webp" alt="Seasonal yard cleanup" />
+          </div>
+    
+        <div class="photoCard">
+          <img src="assets/mockups/mockup13.webp" alt="Trimmed hedges and shrubs" />
+          </div>
+  </div>
     </section>
 
     <section id="pricing" class="pricing info">

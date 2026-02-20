@@ -122,6 +122,107 @@ h2 {
   font-size: 1.5rem;
 }
 
+.carousel {
+  max-width: 900px;
+  margin: 3rem auto;
+  text-align: center;
+}
+
+.carousel-inner {
+  position: relative;
+}
+
+.carousel input[type="radio"] {
+  display: none;
+}
+
+.carousel-viewport {
+  overflow: hidden;
+  border-radius: 12px;
+  background: #111;
+  min-height: 220px;
+}
+
+.carousel-track {
+  display: flex;
+  width: 1200%; /* 12 slides */
+  transition: transform .2s ease-in-out;
+}
+
+.radio {
+    display: none;
+}
+
+.slide {
+  width: 100%;
+  flex-shrink: 0;
+}
+
+.slide img {
+  width: 100vw;
+  height: 320px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Positioning based on checked radio */
+#slide-1:checked ~ .carousel-viewport .carousel-track { transform: translateX(0%); }
+#slide-2:checked ~ .carousel-viewport .carousel-track { transform: translateX(-100%); }
+#slide-3:checked ~ .carousel-viewport .carousel-track { transform: translateX(-200%); }
+#slide-4:checked ~ .carousel-viewport .carousel-track { transform: translateX(-300%); }
+#slide-5:checked ~ .carousel-viewport .carousel-track { transform: translateX(-400%); }
+#slide-6:checked ~ .carousel-viewport .carousel-track { transform: translateX(-500%); }
+#slide-7:checked ~ .carousel-viewport .carousel-track { transform: translateX(-600%); }
+#slide-8:checked ~ .carousel-viewport .carousel-track { transform: translateX(-700%); }
+#slide-9:checked ~ .carousel-viewport .carousel-track { transform: translateX(-800%); }
+#slide-10:checked ~ .carousel-viewport .carousel-track { transform: translateX(-900%); }
+#slide-11:checked ~ .carousel-viewport .carousel-track { transform: translateX(-1000%); }
+#slide-12:checked ~ .carousel-viewport .carousel-track { transform: translateX(-1100%); }
+
+/* Navigation dots */
+.carousel-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.4rem;
+  margin-top: 0.75rem;
+}
+
+.carousel-nav label {
+  width: 10px;
+  height: 10px;
+  background: #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.carousel-nav label:hover {
+  transform: scale(1.2);
+}
+
+#slide-1:checked ~ .carousel-nav label[for="slide-1"],
+#slide-2:checked ~ .carousel-nav label[for="slide-2"],
+#slide-3:checked ~ .carousel-nav label[for="slide-3"],
+#slide-4:checked ~ .carousel-nav label[for="slide-4"],
+#slide-5:checked ~ .carousel-nav label[for="slide-5"],
+#slide-6:checked ~ .carousel-nav label[for="slide-6"],
+#slide-7:checked ~ .carousel-nav label[for="slide-7"],
+#slide-8:checked ~ .carousel-nav label[for="slide-8"],
+#slide-9:checked ~ .carousel-nav label[for="slide-9"],
+#slide-10:checked ~ .carousel-nav label[for="slide-10"],
+#slide-11:checked ~ .carousel-nav label[for="slide-11"],
+#slide-12:checked ~ .carousel-nav label[for="slide-12"] {
+  background: #2f7a4f;
+}
+
+/* Responsive height */
+@media (min-width: 700px) {
+    .carousel-viewport {
+    min-height: 320px;
+  }
+}
+
 .photoGrid {
   display: flex;
   flex-wrap: wrap;
@@ -144,15 +245,8 @@ h2 {
   object-fit: cover;
   display: block;
 }
-
-.photoCard p {
-  padding: 0.5rem 0.75rem;
-  font-size: 0.9rem;
-  color: #333;
-}
-
 .photoCard:hover {
-  transform: scale(1.04);
+  transform: scale(1.1);
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
 }
 
