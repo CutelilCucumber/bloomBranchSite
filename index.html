@@ -169,12 +169,8 @@
     <section id="contact" class="contact">
       <h2>Contact</h2>
 
-      <form name="contact" method="POST" netlify>
-        <input type="hidden" name="form-name" value="contact" />
-
-        <p class="hidden">
-          <label>Don’t fill this out: <input name="bot-field" /></label>
-        </p>
+      <form name="contact" method="POST" netlify netlify-honeypot="bot-field">
+        <input type="honey" name="form-name" value="contact" />
 
         <label>
           Name
@@ -198,13 +194,17 @@
 
         <label>
           Tell me more about your project!
-          <textarea name="message" rows="4" required></textarea>
+          <textarea name="project details" rows="4" required></textarea>
         </label>
 
         <label>
           Referred by
-          <input type="text" name="name" required />
+          <input type="text" name="referral" required />
         </label>
+
+        <p class="honey">
+          <label>username: <input name="bot-field" /></label>
+        </p>
 
         <button class="submit" type="submit">Send Message</button>
       </form>
